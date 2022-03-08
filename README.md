@@ -73,3 +73,17 @@ Una vez que le des instalar se realiza automáticamente todo lo necesario para e
 
 Cuando finalice la instalación aparecen los botones Quitar y Permisos. Para abrirlo debes buscar el acceso directo que automáticamente fue creado en la lista de aplicaciones y ya puedes empezar a utilizarlo:
 
+## ¿Qué es y qué usaremos de Spring?
+
+Spring es el framework más usado de Java. Nos ofrece herramientas que nos permite crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.
+
+Spring tiene una estructura modular y flexible, lo que nos hace usar solo lo que necesitemos.
+
+Vamos a usar 4 subproyectos de Sping:
+
+Spring Framework: Permite crear aplicaciones empresariales. Es transversal, ya que todos lo usan.
+Spring Boot: Con el que podemos crear aplicaciones autocontenidas y autoconfigurables.
+Spring Data: Gestionar e integrar bases de datos.
+Spring Security: Gestionar la seguridad de la aplicación.
+
+
