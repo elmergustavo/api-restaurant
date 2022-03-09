@@ -86,4 +86,45 @@ Spring Boot: Con el que podemos crear aplicaciones autocontenidas y autoconfigur
 Spring Data: Gestionar e integrar bases de datos.
 Spring Security: Gestionar la seguridad de la aplicación.
 
+## Crear nuestra aplicación con Spring Initializr
+https://start.spring.io/
+https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+
+La estructura del proyecto será de la siguiente manera:
+
+1. DOMINIO:
+
+DTO y objetos del dominio (Contexto de la aplicación)
+Servicios: Puente entre los controladores y la capa de persistencia.
+Especificación de repositorios: Interfaces que determinan las reglas que debe cumplir la persistencia para actuar entre los objetos de dominio y la DB.
+2. WEB:
+
+Controladores de API Rest.
+3. PERSISTENCIA:
+
+Repositorios: Implementan las especificaciones que tiene la capa de DOMINIO.
+Entities: Mapean y actúan como tablas de la DB.
+
+## ¿Qué es JPA?
+
+¿Qué es JPA?
+Jpa es una especificación de Java, standar, para un framework ORM. Quiere decir que son uan serie de reglas que Java define para que cualquier framework que quierea interactura con la BD de Java, tenga que seguir.
+
+Los frameworks mas populares de Java para este fin son:
+
+Hibernate
+TopLink
+EclipseLink
+ObjectDB
+<h3>Anotaciones JPA</h3>
+JPA utiliza anotaciones para conectar clases a tablas de la BD y asi evitar hacerlo de manera nativa con SQL.
+
+@Entity. Indica a una clase de java que esta representando una tabla de nuestra BD.
+@Table. Recibe el nombre de la tabla a la cual esta mapeando la clase.
+@column. Se le pone a los atributos de la clase, no es obligatoria, se indica sólo cuando el nombre de la columna es diferente al nombre del atributo de la tabla.
+@id amd @EmbededID. Es el atributo como clave primaria de la tabla dentro de la clase. @id se utiliza cuando es clave primaria sencilla y @EmbededID cuando es una clave primaria compuesta.
+@GeneratedValue. Permite generar automáticamente generar valores para las clases primarias en nuestras clases
+@OneToMany and @MatyToOne. Representar relaciones
+
+* https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.stored-procedures
 
