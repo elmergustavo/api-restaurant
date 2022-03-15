@@ -25,7 +25,7 @@ Una vez termine de actualizar debe realizar la instalación de Java OpenJDK con 
 
 Cuando este proceso termine debes verificar si la instalación del OpenJDK se realizó correctamente, ejecuta el comando java -version y verás lo siguiente en pantalla:
 
-IntelliJ IDEA
+<!-- IntelliJ IDEA -->
 Se puede instalar de varias maneras, según sea su caso puedes consultar en la siguiente guía https://www.jetbrains.com/help/idea/installation-guide.html.
 Yo lo haré desde Ubuntu Software, la tienda de aplicaciones de Ubuntu. Al abrir esta herramienta se debe realizar la búsqueda de IntelliJ.
 
@@ -72,4 +72,78 @@ Lo primero es buscar Postman en la tienda de aplicaciones Ubuntu Software. Tambi
 Una vez que le des instalar se realiza automáticamente todo lo necesario para el uso correcto de la aplicación:
 
 Cuando finalice la instalación aparecen los botones Quitar y Permisos. Para abrirlo debes buscar el acceso directo que automáticamente fue creado en la lista de aplicaciones y ya puedes empezar a utilizarlo:
+
+## ¿Qué es y qué usaremos de Spring?
+
+Spring es el framework más usado de Java. Nos ofrece herramientas que nos permite crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.
+
+Spring tiene una estructura modular y flexible, lo que nos hace usar solo lo que necesitemos.
+
+Vamos a usar 4 subproyectos de Sping:
+
+Spring Framework: Permite crear aplicaciones empresariales. Es transversal, ya que todos lo usan.
+Spring Boot: Con el que podemos crear aplicaciones autocontenidas y autoconfigurables.
+Spring Data: Gestionar e integrar bases de datos.
+Spring Security: Gestionar la seguridad de la aplicación.
+
+## Crear nuestra aplicación con Spring Initializr
+https://start.spring.io/
+https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+
+La estructura del proyecto será de la siguiente manera:
+
+1. DOMINIO:
+
+DTO y objetos del dominio (Contexto de la aplicación)
+Servicios: Puente entre los controladores y la capa de persistencia.
+Especificación de repositorios: Interfaces que determinan las reglas que debe cumplir la persistencia para actuar entre los objetos de dominio y la DB.
+2. WEB:
+
+Controladores de API Rest.
+3. PERSISTENCIA:
+
+Repositorios: Implementan las especificaciones que tiene la capa de DOMINIO.
+Entities: Mapean y actúan como tablas de la DB.
+
+## ¿Qué es JPA?
+
+¿Qué es JPA?
+Jpa es una especificación de Java, standar, para un framework ORM. Quiere decir que son uan serie de reglas que Java define para que cualquier framework que quierea interactura con la BD de Java, tenga que seguir.
+
+Los frameworks mas populares de Java para este fin son:
+
+Hibernate
+TopLink
+EclipseLink
+ObjectDB
+<h3>Anotaciones JPA</h3>
+JPA utiliza anotaciones para conectar clases a tablas de la BD y asi evitar hacerlo de manera nativa con SQL.
+
+@Entity. Indica a una clase de java que esta representando una tabla de nuestra BD.
+@Table. Recibe el nombre de la tabla a la cual esta mapeando la clase.
+@column. Se le pone a los atributos de la clase, no es obligatoria, se indica sólo cuando el nombre de la columna es diferente al nombre del atributo de la tabla.
+@id amd @EmbededID. Es el atributo como clave primaria de la tabla dentro de la clase. @id se utiliza cuando es clave primaria sencilla y @EmbededID cuando es una clave primaria compuesta.
+@GeneratedValue. Permite generar automáticamente generar valores para las clases primarias en nuestras clases
+@OneToMany and @MatyToOne. Representar relaciones
+
+* https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.stored-procedures
+
+¿Qué es JPA?
+Jpa es una especificación de Java, standar, para un framework ORM. Quiere decir que son uan serie de reglas que Java define para que cualquier framework que quierea interactura con la BD de Java, tenga que seguir.
+
+Los frameworks mas populares de Java para este fin son:
+
+Hibernate
+TopLink
+EclipseLink
+ObjectDB
+<h3>Anotaciones JPA</h3>
+JPA utiliza anotaciones para conectar clases a tablas de la BD y asi evitar hacerlo de manera nativa con SQL.
+
+@Entity. Indica a una clase de java que esta representando una tabla de nuestra BD.
+@Table. Recibe el nombre de la tabla a la cual esta mapeando la clase.
+@column. Se le pone a los atributos de la clase, no es obligatoria, se indica sólo cuando el nombre de la columna es diferente al nombre del atributo de la tabla.
+@id amd @EmbededID. Es el atributo como clave primaria de la tabla dentro de la clase. @id se utiliza cuando es clave primaria sencilla y @EmbededID cuando es una clave primaria compuesta.
+@GeneratedValue. Permite generar automáticamente generar valores para las clases primarias en nuestras clases
+@OneToMany and @MatyToOne. Representar relaciones
 
