@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/compras")
+@RequestMapping("/purchases")
 public class PurchaseController {
     @Autowired
     private PurchaseService purchaseService;
@@ -32,3 +32,4 @@ public class PurchaseController {
         return new ResponseEntity<>(purchaseService.save(purchase), HttpStatus.CREATED);
     }
 }
+

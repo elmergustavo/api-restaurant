@@ -14,5 +14,4 @@ public class UsuarioDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return new User("gustavo", "{noop}qa1234", new ArrayList<>());
     }
-
 }
